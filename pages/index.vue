@@ -1,21 +1,21 @@
 <template>
   <div class="container">
-    <div @mousedown="onMousedown('C4')" class="key">C4</div>
-    <div @mousedown="onMousedown('D4')" class="key">D4</div>
-    <div @mousedown="onMousedown('E4')" class="key">E4</div>
-    <div @mousedown="onMousedown('F4')" class="key">F4</div>
-    <div @mousedown="onMousedown('G4')" class="key">G4</div>
-    <div @mousedown="onMousedown('A4')" class="key">A4</div>
-    <div @mousedown="onMousedown('B4')" class="key">B4</div>
-    <div @mousedown="onMousedown('C5')" class="key">C5</div>
-    <div @mousedown="onMousedown('D5')" class="key">D5</div>
-    <div @mousedown="onMousedown('E5')" class="key">E5</div>
-    <div @mousedown="onMousedown('F5')" class="key">F5</div>
-    <div @mousedown="onMousedown('G5')" class="key">G5</div>
-    <div @mousedown="onMousedown('A5')" class="key">A5</div>
-    <div @mousedown="onMousedown('B5')" class="key">B5</div>
-    <div @mousedown="onMousedown('C6')" class="key">C6</div>
-    <div @mousedown="onMousedown('D6')" class="key">D6</div>
+    <div @mousedown.prevent="noteOn('C4')" @touchstart.prevent="noteOn('C4')" class="key">C4</div>
+    <div @mousedown.prevent="noteOn('D4')" @touchstart.prevent="noteOn('D4')" class="key">D4</div>
+    <div @mousedown.prevent="noteOn('E4')" @touchstart.prevent="noteOn('E4')" class="key">E4</div>
+    <div @mousedown.prevent="noteOn('F4')" @touchstart.prevent="noteOn('F4')" class="key">F4</div>
+    <div @mousedown.prevent="noteOn('G4')" @touchstart.prevent="noteOn('G4')" class="key">G4</div>
+    <div @mousedown.prevent="noteOn('A4')" @touchstart.prevent="noteOn('A4')" class="key">A4</div>
+    <div @mousedown.prevent="noteOn('B4')" @touchstart.prevent="noteOn('B4')" class="key">B4</div>
+    <div @mousedown.prevent="noteOn('C5')" @touchstart.prevent="noteOn('C5')" class="key">C5</div>
+    <div @mousedown.prevent="noteOn('D5')" @touchstart.prevent="noteOn('D5')" class="key">D5</div>
+    <div @mousedown.prevent="noteOn('E5')" @touchstart.prevent="noteOn('E5')" class="key">E5</div>
+    <div @mousedown.prevent="noteOn('F5')" @touchstart.prevent="noteOn('F5')" class="key">F5</div>
+    <div @mousedown.prevent="noteOn('G5')" @touchstart.prevent="noteOn('G5')" class="key">G5</div>
+    <div @mousedown.prevent="noteOn('A5')" @touchstart.prevent="noteOn('A5')" class="key">A5</div>
+    <div @mousedown.prevent="noteOn('B5')" @touchstart.prevent="noteOn('B5')" class="key">B5</div>
+    <div @mousedown.prevent="noteOn('C6')" @touchstart.prevent="noteOn('C6')" class="key">C6</div>
+    <div @mousedown.prevent="noteOn('D6')" @touchstart.prevent="noteOn('D6')" class="key">D6</div>
   </div>
 </template>
 
@@ -32,7 +32,7 @@ export default {
     this.synth = new Tone.Synth().toMaster();
   },
   methods: {
-    onMousedown: function(note) {
+    noteOn: function(note) {
       this.synth.triggerAttackRelease(note, "8n");
     }
   }
