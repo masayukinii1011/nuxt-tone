@@ -62,11 +62,11 @@ export default {
   }
 
   &:nth-child(8) {
-    background: saturate(#c93a40, 4%);
+    background: saturate(#c93a40, 8%);
   }
 
   &:nth-child(15) {
-    background: saturate(#c93a40, 16%);
+    background: saturate(#c93a40, 32%);
   }
 
   &:nth-child(2) {
@@ -74,11 +74,11 @@ export default {
   }
 
   &:nth-child(9) {
-    background: saturate(#f2cf01, 4%);
+    background: saturate(#f2cf01, 8%);
   }
 
   &:nth-child(16) {
-    background: saturate(#f2cf01, 16%);
+    background: saturate(#f2cf01, 32%);
   }
 
   &:nth-child(3) {
@@ -86,7 +86,7 @@ export default {
   }
 
   &:nth-child(10) {
-    background: saturate(#a0c238, 4%);
+    background: saturate(#a0c238, 8%);
   }
 
   &:nth-child(4) {
@@ -94,7 +94,7 @@ export default {
   }
 
   &:nth-child(11) {
-    background: saturate(#cc528b, 4%);
+    background: saturate(#cc528b, 8%);
   }
 
   &:nth-child(5) {
@@ -102,7 +102,7 @@ export default {
   }
 
   &:nth-child(12) {
-    background: saturate(#0074bf, 4%);
+    background: saturate(#0074bf, 8%);
   }
 
   &:nth-child(6) {
@@ -110,7 +110,7 @@ export default {
   }
 
   &:nth-child(13) {
-    background: saturate(#d16b16, 4%);
+    background: saturate(#d16b16, 8%);
   }
 
   &:nth-child(7) {
@@ -118,7 +118,7 @@ export default {
   }
 
   &:nth-child(14) {
-    background: saturate(#56a764, 4%);
+    background: saturate(#56a764, 8%);
   }
 }
 </style>
