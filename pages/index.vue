@@ -46,9 +46,6 @@ export default {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-
-  @media screen and (max-width: 425px) {
-  }
 }
 
 .key {
