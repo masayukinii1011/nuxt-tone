@@ -1,6 +1,6 @@
 # nuxt-tone
 
-> My sensational Nuxt.js project
+Nuxt.jsとTone.jsを使用して、ブラウザから扱えるシンセサイザーを製作中です。
 
 ## Build Setup
 
