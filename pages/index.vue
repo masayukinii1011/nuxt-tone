@@ -50,6 +50,14 @@ export default {
 </script>
 
 <style lang="scss">
+$c-note: #c93a40;
+$d-note: #f2cf01;
+$e-note: #a0c238;
+$f-note: #cc528b;
+$g-note: #0074bf;
+$a-note: #d16b16;
+$b-note: #56a764;
+
 .container {
   height: 100vh;
   width: 100vw;
@@ -76,67 +84,67 @@ export default {
   }
 
   &:nth-child(1) {
-    background: #c93a40;
+    background: $c-note;
   }
 
   &:nth-child(8) {
-    background: saturate(#c93a40, 8%);
+    background: saturate($c-note, 8%);
   }
 
   &:nth-child(15) {
-    background: saturate(#c93a40, 32%);
+    background: saturate($c-note, 32%);
   }
 
   &:nth-child(2) {
-    background: #f2cf01;
+    background: $d-note;
   }
 
   &:nth-child(9) {
-    background: saturate(#f2cf01, 8%);
+    background: saturate($d-note, 8%);
   }
 
   &:nth-child(16) {
-    background: saturate(#f2cf01, 32%);
+    background: saturate($d-note, 32%);
   }
 
   &:nth-child(3) {
-    background: #a0c238;
+    background: $e-note;
   }
 
   &:nth-child(10) {
-    background: saturate(#a0c238, 8%);
+    background: saturate($e-note, 8%);
   }
 
   &:nth-child(4) {
-    background: #cc528b;
+    background: $f-note;
   }
 
   &:nth-child(11) {
-    background: saturate(#cc528b, 8%);
+    background: saturate($f-note, 8%);
   }
 
   &:nth-child(5) {
-    background: #0074bf;
+    background: $g-note;
   }
 
   &:nth-child(12) {
-    background: saturate(#0074bf, 8%);
+    background: saturate($g-note, 8%);
   }
 
   &:nth-child(6) {
-    background: #d16b16;
+    background: $a-note;
   }
 
   &:nth-child(13) {
-    background: saturate(#d16b16, 8%);
+    background: saturate($a-note, 8%);
   }
 
   &:nth-child(7) {
-    background: #56a764;
+    background: $b-note;
   }
 
   &:nth-child(14) {
-    background: saturate(#56a764, 8%);
+    background: saturate($b-note, 8%);
   }
 }
 </style>
