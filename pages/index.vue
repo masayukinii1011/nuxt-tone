@@ -1,21 +1,13 @@
 <template>
   <div class="container">
-    <div @mousedown.prevent="noteOn('C4')" @touchstart.prevent="noteOn('C4')" class="key">C4</div>
-    <div @mousedown.prevent="noteOn('D4')" @touchstart.prevent="noteOn('D4')" class="key">D4</div>
-    <div @mousedown.prevent="noteOn('E4')" @touchstart.prevent="noteOn('E4')" class="key">E4</div>
-    <div @mousedown.prevent="noteOn('F4')" @touchstart.prevent="noteOn('F4')" class="key">F4</div>
-    <div @mousedown.prevent="noteOn('G4')" @touchstart.prevent="noteOn('G4')" class="key">G4</div>
-    <div @mousedown.prevent="noteOn('A4')" @touchstart.prevent="noteOn('A4')" class="key">A4</div>
-    <div @mousedown.prevent="noteOn('B4')" @touchstart.prevent="noteOn('B4')" class="key">B4</div>
-    <div @mousedown.prevent="noteOn('C5')" @touchstart.prevent="noteOn('C5')" class="key">C5</div>
-    <div @mousedown.prevent="noteOn('D5')" @touchstart.prevent="noteOn('D5')" class="key">D5</div>
-    <div @mousedown.prevent="noteOn('E5')" @touchstart.prevent="noteOn('E5')" class="key">E5</div>
-    <div @mousedown.prevent="noteOn('F5')" @touchstart.prevent="noteOn('F5')" class="key">F5</div>
-    <div @mousedown.prevent="noteOn('G5')" @touchstart.prevent="noteOn('G5')" class="key">G5</div>
-    <div @mousedown.prevent="noteOn('A5')" @touchstart.prevent="noteOn('A5')" class="key">A5</div>
-    <div @mousedown.prevent="noteOn('B5')" @touchstart.prevent="noteOn('B5')" class="key">B5</div>
-    <div @mousedown.prevent="noteOn('C6')" @touchstart.prevent="noteOn('C6')" class="key">C6</div>
-    <div @mousedown.prevent="noteOn('D6')" @touchstart.prevent="noteOn('D6')" class="key">D6</div>
+    <div
+      v-for="(note, index) in notes"
+      :key="index"
+      @mousedown.prevent="noteOn(note)"
+      @touchstart.prevent="noteOn(note)"
+      class="note"
+      ontouchstart
+    >{{note}}</div>
   </div>
 </template>
 
@@ -25,7 +17,25 @@ import Tone from "tone";
 export default {
   data: function() {
     return {
-      synth: ""
+      synth: "",
+      notes: [
+        "C4",
+        "D4",
+        "E4",
+        "F4",
+        "G4",
+        "A4",
+        "B4",
+        "C5",
+        "D5",
+        "E5",
+        "F5",
+        "G5",
+        "A5",
+        "B5",
+        "C6",
+        "D6"
+      ]
     };
   },
   mounted: function() {
@@ -48,7 +58,7 @@ export default {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.key {
+.note {
   border: 1px solid #fff;
   color: #fff;
   font-size: 3.6rem;
@@ -56,6 +66,14 @@ export default {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 
   &:nth-child(1) {
     background: #c93a40;
